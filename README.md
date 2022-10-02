@@ -1,5 +1,11 @@
 ***Lunarvim config***
+
 This is a first stab at using more of a supported neovim config via Lunarvim
+
+**Requirements**
+
+- >= Neovim 0.8
+- >= Lunarvim commit `a77fcf6`
 
 The only files/folders I should really be concerned with are:
 - `config.lua`
