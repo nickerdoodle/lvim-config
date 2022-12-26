@@ -89,6 +89,9 @@ lvim.keys.normal_mode[';'] = ':'
 vim.keymap.set("n", "K", "5k", {})
 lvim.keys.normal_mode['J'] = '5j'
 lvim.keys.normal_mode['K'] = '5k'
+lvim.keys.normal_mode['K'] = '5k'
+vim.keymap.set("v", "J", "5j", {})
+vim.keymap.set("v", "K", "5k", {})
 lvim.keys.normal_mode['L'] = '$'
 lvim.keys.normal_mode['H'] = '^'
 
@@ -97,20 +100,21 @@ lvim.lsp.buffer_mappings.normal_mode.K["2"] = "5k"
 
 require('nm.keymaps')
 require('nm.plugins')
+-- require('nm.nvim-ide')
 lvim.colorscheme = "vscode"
 lvim.builtin.breadcrumbs.active = true
 
 -- require('lspconfig')['tsserver'].setup()
--- require('lspconfig')['omnisharp'].setup()
+require('lspconfig')['omnisharp'].setup()
 
 -- generic LSP settings
 
 -- -- make sure server will always be installed even if the server is in skipped_servers list
 lvim.lsp.installer.setup.ensure_installed = {
-    "sumeko_lua",
-    "jsonls",
-    "tsserver",
-    "omnisharp"
+  "sumeko_lua",
+  "jsonls",
+  "tsserver",
+  "omnisharp"
 }
 -- -- change UI setting of `LspInstallInfo`
 -- -- see <https://github.com/williamboman/nvim-lsp-installer#default-configuration>

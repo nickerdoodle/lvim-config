@@ -12,6 +12,7 @@ keymap("i", "jj", "<esc>", opts)
 -- keymap("n", "<C-p>", ":Telescope find_files<CR>", opts)
 -- lvim.builtin.telescope.defaults.mappings.n["<C-p>"][1] = ":Telescope find_files<cr>"
 keymap("n", "<C-p>", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<C-b>", "<cmd>NvimTreeToggle<cr>", opts)
 
 lvim.builtin.breadcrumbs.active = true
 
@@ -44,5 +45,8 @@ vim.cmd [[
 ]]
 
 keymap("n", "<m-q>", ":call QuickFixToggle()<cr>", opts)
+
+-- neat one. Let's you go to parent from nested object
+vim.keymap.set("n", "zp", "vaBo^<Esc>")
 
 return M

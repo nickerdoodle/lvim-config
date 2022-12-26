@@ -6,6 +6,7 @@ lvim.plugins = {
     end
   },
   { "simrat39/symbols-outline.nvim" },
+  { 'ldelossa/nvim-ide' },
 }
 
 vim.g.symbols_outline = {
